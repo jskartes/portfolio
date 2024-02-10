@@ -1,6 +1,11 @@
+import { Routes, Route } from 'react-router-dom';
+import Nav from './components/Nav';
+
 const App = () => {
   return (
-    <h1>Hello, world!</h1>
+    <div className='App'>
+      <Nav />
+    </div>
   );
 }
 

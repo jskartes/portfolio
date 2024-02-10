@@ -1,0 +1,66 @@
+$app-background-color: #e4e9f0;
+$box-shadow-color: #899ebe;
+$nav-background-color: #bbc6d7;
+$text-color: #3a557c;
+
+* {
+  box-sizing: border-box;
+  cursor: default;
+  margin: 0;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+.App {
+  background-color: $app-background-color;
+  color: $text-color;
+  font-family: sans-serif;
+  position: relative;
+}
+
+.Nav {
+  align-items: center;
+  box-shadow: 0 4px 4px $box-shadow-color;
+  background-color: $nav-background-color;
+  display: flex;
+  height: 8vmin;
+  justify-content: space-between;
+  left: 0;
+  padding: 0.5vmin 5vmin;
+  position: fixed;
+  right: 0;
+  top: 0;
+  
+  > span {
+    color: $box-shadow-color;
+    cursor: pointer;
+    font-size: 3vmin;
+    transition: 0.2s ease-in-out;
+
+    &:hover {color: $text-color;}
+  }
+
+  .nav-links {
+    display: flex;
+
+    span {
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 2vmin;
+      font-weight: bold;
+      padding: 0.75vmin 0;
+      text-align: center;
+      transition: 0.2s ease-in-out;
+      width: 10vmin;
+
+      &:hover {
+        background-color: $box-shadow-color;
+        color: $app-background-color;
+      }
+    }
+  }
+}
