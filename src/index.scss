@@ -1,6 +1,9 @@
-$app-background-color: #e4e9f0;
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;700&display=swap');
+
 $box-shadow-color: #899ebe;
+$hero-background-color: #e4e9f0;
 $nav-background-color: #bbc6d7;
+$nav-link-hover-text-color: white;
 $text-color: #3a557c;
 
 * {
@@ -15,9 +18,9 @@ a {
 }
 
 .App {
-  background-color: $app-background-color;
   color: $text-color;
-  font-family: sans-serif;
+  font-family: Jura, sans-serif;
+  height: 100%;
   position: relative;
 }
 
@@ -29,7 +32,7 @@ a {
   height: 8vmin;
   justify-content: space-between;
   left: 0;
-  padding: 0.5vmin 5vmin;
+  padding: 0.5vmin 3vmin 0.5vmin 5vmin;
   position: fixed;
   right: 0;
   top: 0;
@@ -37,10 +40,14 @@ a {
   > span {
     color: $box-shadow-color;
     cursor: pointer;
-    font-size: 3vmin;
+    font-family: Jura;
+    font-size: 3.75vmin;
+    padding-bottom: 0.5vmin;
     transition: 0.2s ease-in-out;
 
-    &:hover {color: $text-color;}
+    &:hover {
+      color: $text-color;
+    }
   }
 
   .nav-links {
@@ -50,17 +57,41 @@ a {
       border-radius: 4px;
       cursor: pointer;
       display: inline-block;
-      font-size: 2vmin;
+      font-size: 2.5vmin;
       font-weight: bold;
       padding: 0.75vmin 0;
       text-align: center;
       transition: 0.2s ease-in-out;
-      width: 10vmin;
+      width: 14vmin;
 
       &:hover {
         background-color: $box-shadow-color;
-        color: $app-background-color;
+        color: $nav-link-hover-text-color;
       }
+    }
+  }
+}
+
+.Home {
+  .home-hero {
+    align-items: center;
+    background-color: $hero-background-color;
+    display: flex;
+    flex-direction: column;
+    font-family: Jura;
+    justify-content: center;
+    height: 50vh;
+    padding-top: 3vmin;
+
+    .home-name {
+      font-size: 8vmin;
+      font-weight: bold;
+      margin-bottom: 3vmin;
+    }
+
+    .home-role {
+      color: $box-shadow-color;
+      font-size: 3vmin;
     }
   }
 }
