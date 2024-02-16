@@ -36,8 +36,9 @@ a {
   position: fixed;
   right: 0;
   top: 0;
+  z-index: 10;
   
-  > span {
+  .nav-name {
     color: $box-shadow-color;
     cursor: pointer;
     font-family: Jura;
@@ -53,7 +54,7 @@ a {
   .nav-links {
     display: flex;
 
-    span {
+    .nav-link {
       border-radius: 4px;
       cursor: pointer;
       display: inline-block;
@@ -80,8 +81,17 @@ a {
     flex-direction: column;
     font-family: Jura;
     justify-content: center;
-    height: 50vh;
+    height: 75vh;
+    overflow: hidden;
     padding-top: 3vmin;
+    position: relative;
+
+    img {
+      left: 0;
+      opacity: 0.2;
+      position: absolute;
+      width: 100%;
+    }
 
     .home-name {
       font-size: 8vmin;
@@ -90,8 +100,18 @@ a {
     }
 
     .home-role {
-      color: $box-shadow-color;
       font-size: 3vmin;
     }
   }
+}
+
+.Footer {
+  align-items: center;
+  background-color: $text-color;
+  color: $nav-background-color;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.75vmin;
+  height: 16vmin;
+  justify-content: center;
 }
